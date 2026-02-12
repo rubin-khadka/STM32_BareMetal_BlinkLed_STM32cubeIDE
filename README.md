@@ -3,11 +3,10 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![STM32](https://img.shields.io/badge/STM32-F103C8T6-blue)
 ![CubeIDE](https://img.shields.io/badge/IDE-STM32CubeIDE-green)
-![Bare Metal](https://img.shields.io/badge/Level-Register--Only-red)
 
 ## Project Overview
 
-This project demonstrates **complete bare-metal programming** on the STM32F103C8 "Blue Pill" without using HAL, LL, or CubeMX. It configures the system clock to **72MHz** from the 8MHz HSE crystal and PLL and blinks the onboard LED on PC13.
+This project demonstrates **complete bare-metal programming** on the STM32F103C8 "Blue Pill" without using HAL, LL, or CubeMX. It configures the system clock to **72MHz** from the **8MHz HSE crystal and PLL** and blinks the onboard LED on PC13.
 
 ## Features
 
@@ -58,7 +57,8 @@ git clone https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE.
 ```
 2. Open in STM32CubeIDE
 
-- `File` → `Open Projects from File System...`
+- `File` → `Import...`
+- `General` → `Existing Projects into Workspace` → `Next`
 - Select the project directory
 - Click `Finish`    
 
@@ -79,6 +79,18 @@ git clone https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE.
 - Frequency: 1 Hz
 
 **LED blinks at 1Hz = 72MHz configured correctly**
+
+## Memory Footprint
+
+| Section | Size | Description |
+|---------|------|-------------|
+| **text** | 936 bytes | Code + constants |
+| **data** | 4 bytes | Initialized variables |
+| **bss**  | 1564 bytes | Uninitialized variables |
+| **Total** | **2504 bytes** | Flash usage |
+
+**Total Flash Usage: ~2.5KB**  
+This bare-metal application uses only **2.5KB** of Flash.
 
 ## Future Improvements
 - **SysTick Timer** - Precise millisecond delays
