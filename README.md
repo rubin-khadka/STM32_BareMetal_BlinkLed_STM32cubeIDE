@@ -19,8 +19,9 @@ This project is to learn and demonstrate **complete bare-metal programming** on 
 
 ## Video Demonstration
 
-
 https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
+
+*Blue Pill running at 72MHz - LED blinks once per second*
 
 
 ## Key Registers Configured
