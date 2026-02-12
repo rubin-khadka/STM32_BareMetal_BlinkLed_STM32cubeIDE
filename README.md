@@ -19,6 +19,10 @@ This project is to learn and demonstrate **complete bare-metal programming** on 
 
 ## Video Demonstration
 
+
+https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
+
+
 ## Key Registers Configured
 
 | Register | Setting | Purpose |
