@@ -7,8 +7,9 @@
  ******************************************************************************
  */
 
-#include "STM32F103xB.h"
-#include <stdint.h>
+
+#include "stm32f103xb.h"
+#include "gpio.h"
 
 #if !defined(__SOFT_FP__) && defined(__ARM_FP)
   #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
@@ -16,9 +17,16 @@
 
 int main(void)
 {
-    /* Loop forever */
+	// GPIO PC13 initialization
+	LED_init();
+
+
 	while(1)
 	{
-
+		LED_ON();
+		Delay_ms(1000);
+		LED_OFF();
+		Delay_ms(1000);
 	}
 }
+
