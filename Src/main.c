@@ -7,7 +7,6 @@
  ******************************************************************************
  */
 
-
 #include "stm32f103xb.h"
 #include "gpio.h"
 
@@ -19,7 +18,6 @@ int main(void)
 {
 	// GPIO PC13 initialization
 	LED_init();
-
 
 	while(1)
 	{

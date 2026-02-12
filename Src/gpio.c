@@ -35,7 +35,6 @@ void LED_Toggle(void)
 	GPIOC->ODR ^= GPIO_ODR_ODR13;
 }
 
-
 void Delay_ms(uint32_t ms)
 {
     // At 72MHz, ~7200 cycles per ms
@@ -46,4 +45,3 @@ void Delay_ms(uint32_t ms)
         __asm__("nop");  // Waste one cycle
     }
 }
-
