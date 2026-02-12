@@ -6,7 +6,7 @@
 
 ## Project Overview
 
-This project demonstrates **complete bare-metal programming** on the STM32F103C8 "Blue Pill" without using HAL, LL, or CubeMX. It configures the system clock to **72MHz** from the **8MHz HSE crystal and PLL** and blinks the onboard LED on PC13.
+This project is to learn and demonstrate **complete bare-metal programming** on the STM32F103C8 "Blue Pill" without using HAL, LL, or CubeMX. It configures the system clock to **72MHz** from the **8MHz HSE crystal and PLL** and blinks the onboard LED on PC13.
 
 ## Features
 
