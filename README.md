@@ -3,7 +3,7 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![STM32](https://img.shields.io/badge/STM32-F103C8T6-blue)
 ![CubeIDE](https://img.shields.io/badge/IDE-STM32CubeIDE-green)
-
+![Bare Metal](https://img.shields.io/badge/Level-Register--Only-red)
 
 ## Project Overview
 
@@ -18,6 +18,22 @@ This project demonstrates **complete bare-metal programming** on the STM32F103C8
 | **APB1 Prescaler** | 72MHz/2 = 36MHz | 
 | **LED Control** | PC13 push-pull output, active low | 
 
+## Video Demonstration
+
+## Key Registers Configured
+
+| Register | Setting | Purpose |
+|----------|---------|---------|
+| `RCC->CR` | `HSEON`, `PLLON` | Enable HSE crystal and PLL |
+| `RCC->CFGR` | `PLLMULL9`, `PLLSRC`, `PPRE1_DIV2` | 72MHz clock, APB1 = 36MHz |
+| `FLASH->ACR` | `LATENCY_2` | 2 wait states for 72MHz |
+| `GPIOC->CRH` | `MODE13_0` | PC13 as output 10MHz, push-pull |
+| `GPIOC->BSRR` | `BS13`, `BR13` | Atomic LED control |
+
+[View complete clock configuration code](https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE/blob/main/Src/system_stm32f1xx.c)<br>
+[View GPIO initialisation and control code](https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE/blob/main/Src/gpio.c)<br>
+[View main application code](https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE/blob/main/Src/main.c)
+
 ## Hardware Requirements
 
 | Components | Details |
@@ -26,8 +42,6 @@ This project demonstrates **complete bare-metal programming** on the STM32F103C8
 | **Crystal** | 8MHz HSE (onboard) |
 | **LED** | PC13 (onboard, active LOW) |
 | **Programmer** | ST-Link V2 |
-
-## Video Demonstration
 
 ## Getting Started
 
@@ -64,6 +78,8 @@ git clone https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE.
 - Cycle: 1 second total
 - Frequency: 1 Hz
 
+**LED blinks at 1Hz = 72MHz configured correctly**
+
 ## Future Improvements
 - **SysTick Timer** - Precise millisecond delays
 - **MCO Output** - Measure actual clock on PA8
@@ -78,7 +94,7 @@ git clone https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE.
 ## Project Status
 - **Status**: Complete
 - **Version**: v1.0
-- **Last Updated**: Feburary 2026
+- **Last Updated**: February 2026
 
 ## Contact
 **Rubin Khadka Chhetri**  
