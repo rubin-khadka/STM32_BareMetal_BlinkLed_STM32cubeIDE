@@ -1,1 +1,1 @@
-# STM32_BareMetal_BlinkLed_STM32cubeIDE
+# STM32 BareMetal BlinkLed STM32cubeIDE
