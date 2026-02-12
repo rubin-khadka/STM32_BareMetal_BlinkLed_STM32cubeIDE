@@ -3,7 +3,3 @@
 # STM32CubeIDE Build Outputs
 Debug/
 .settings/
-
-
-# remove user files created by proteus
-*.RUBIN
