@@ -7,6 +7,7 @@
  */
 
 #include "stm32f103xb.h"
+#include "gpio.h"
 
 void LED_init(void)
 {
