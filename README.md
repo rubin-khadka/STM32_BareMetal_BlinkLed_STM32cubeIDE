@@ -74,10 +74,10 @@ git clone https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE.
     - Run: `F8` (Resume)
 
 ### Expected Behavior
-    - LED ON: 500ms
-    - LED OFF: 500ms
-    - Cycle: 1 second total
-    - Frequency: 1 Hz
+- LED ON: 500ms
+- LED OFF: 500ms
+- Cycle: 1 second total
+- Frequency: 1 Hz
 
 **LED blinks at 1Hz = 72MHz configured correctly**
 
