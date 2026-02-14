@@ -8,6 +8,8 @@
 
 This project is to learn and demonstrate **complete bare-metal programming** on the STM32F103C8 "Blue Pill" without using HAL, LL, or CubeMX. It configures the system clock to **72MHz** from the **8MHz HSE crystal and PLL** and blinks the onboard LED on PC13.
 
+There's also a 🔗[Keil uVision5 version](https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_Keil) of this same project, created to compare the two toolchains: their code size, build time, and developer experience.
+
 ## Features
 
 | Feature | Description |
@@ -38,21 +40,16 @@ https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
 [View GPIO initialisation and control code](https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE/blob/main/Src/gpio.c)<br>
 [View main application code](https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE/blob/main/Src/main.c)
 
-## Hardware Requirements
+## Getting Started
 
+### Prerequisites
 | Components | Details |
 |------|---------|
 | **MCU** | STM32F103C8T6 "Blue Pill" |
 | **Crystal** | 8MHz HSE (onboard) |
 | **LED** | PC13 (onboard, active LOW) |
 | **Programmer** | ST-Link V2 |
-
-## Getting Started
-
-### Prerequisites
-- STM32CubeIDE v1.13.0+
-- ST-Link V2 programmer
-- STM32F103C8 "Blue Pill" board
+| **IDE** | STM32cube |
 
 ### Installation
 
@@ -61,27 +58,26 @@ https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
 git clone https://github.com/rubin-khadka/STM32_BareMetal_BlinkLed_STM32cubeIDE.git
 ```
 2. Open in STM32CubeIDE
-
-- `File` → `Import...`
-- `General` → `Existing Projects into Workspace` → `Next`
-- Select the project directory
-- Click `Finish`    
+    - `File` → `Import...`
+    - `General` → `Existing Projects into Workspace` → `Next`
+    - Select the project directory
+    - Click `Finish`    
 
 3. Verify Project Settings
-- `Project` → `Properties` → `C/C++ Build` → `Settings`
-- `MCU GCC Compiler` → `Preprocessor`
-- Ensure `STM32F103xB` is defined
+    - `Project` → `Properties` → `C/C++ Build` → `Settings`
+    - `MCU GCC Compiler` → `Preprocessor`
+    - Ensure `STM32F103xB` is defined
 
 4. Build & Flash
-- Build: `Ctrl+B`
-- Debug: `F11`
-- Run: `F8` (Resume)
+    - Build: `Ctrl+B`
+    - Debug: `F11`
+    - Run: `F8` (Resume)
 
 ### Expected Behavior
-- LED ON: 500ms
-- LED OFF: 500ms
-- Cycle: 1 second total
-- Frequency: 1 Hz
+    - LED ON: 500ms
+    - LED OFF: 500ms
+    - Cycle: 1 second total
+    - Frequency: 1 Hz
 
 **LED blinks at 1Hz = 72MHz configured correctly**
 
@@ -102,7 +98,6 @@ This bare-metal application uses only **2.5KB** of Flash.
 - **MCO Output** - Measure actual clock on PA8
 - **UART Debug** - Print clock speed
 - **Power Optimization** - Disable HSI after PLL lock
-- **Keil Version** - Same project in uVision5
 
 ## Resources
 - [STM32F103 Datasheet](https://www.st.com/resource/en/datasheet/stm32f103c8.pdf)
