@@ -4,6 +4,10 @@
 ![STM32](https://img.shields.io/badge/STM32-F103C8T6-blue)
 ![CubeIDE](https://img.shields.io/badge/IDE-STM32CubeIDE-green)
 
+## Video Demonstration
+
+https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
+
 ## Project Overview
 
 This project is to learn and demonstrate **complete bare-metal programming** on the STM32F103C8 "Blue Pill" without using HAL, LL, or CubeMX. It configures the system clock to **72MHz** from the **8MHz HSE crystal and PLL** and blinks the onboard LED on PC13.
@@ -19,14 +23,8 @@ There's also a 🔗[Keil uVision5 version](https://github.com/rubin-khadka/STM32
 | **APB1 Prescaler** | 72MHz/2 = 36MHz | 
 | **LED Control** | PC13 push-pull output, active low | 
 
-## Video Demonstration
 
-https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
-
-*Blue Pill running at 72MHz - LED blinks once per second*
-
-
-## Key Registers Configured
+## Key Registers Configuration
 
 | Register | Setting | Purpose |
 |----------|---------|---------|
