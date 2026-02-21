@@ -2,11 +2,14 @@
 
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 ![STM32](https://img.shields.io/badge/STM32-F103C8T6-blue)
-![CubeIDE](https://img.shields.io/badge/IDE-STM32CubeIDE-green)
+![CubeIDE](https://img.shields.io/badge/IDE-STM32CubeIDE-darkblue)
 
 ## Video Demonstration
 
-https://github.com/user-attachments/assets/cc511bb2-c0b4-4bc1-b9db-fd029f3f6868
+
+https://github.com/user-attachments/assets/17fdd20d-74e9-4cd8-8eee-dd0e8773a02a
+
+
 
 ## Project Overview
 
