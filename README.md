@@ -111,7 +111,7 @@ This bare-metal application uses only **2.5KB** of Flash.
 
 ## Contact
 **Rubin Khadka Chhetri**  
-📧 rubin.robotic@gmail.com  
+📧 rubinkhadka84@gmail.com <br>
 🐙 GitHub: https://github.com/rubin-khadka
 
 
